@@ -95,7 +95,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className="text-base-content/70 hover:text-primary transition-colors duration-200 text-sm"
+                                        className="text-base-content/80 link link-animated hover:text-primary transition-colors duration-200"
                                     >
                                         {link.name}
                                     </a>
@@ -112,7 +112,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className="text-base-content/70 hover:text-primary transition-colors duration-200 text-sm"
+                                        className="text-base-content/80 link link-animated hover:text-primary transition-colors duration-200"
                                     >
                                         {link.name}
                                     </a>
@@ -129,7 +129,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className="text-base-content/70 hover:text-primary transition-colors duration-200 text-sm"
+                                        className="text-base-content/80 link link-animated hover:text-primary transition-colors duration-200"
                                     >
                                         {link.name}
                                     </a>
@@ -146,7 +146,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className="text-base-content/70 hover:text-primary transition-colors duration-200 text-sm flex items-center gap-2"
+                                        className="text-base-content/80 link link-animated hover:text-primary transition-colors duration-200 flex items-center gap-2"
                                     >
                                         <span className={`${link.icon} size-4`}></span>
                                         {link.name}
@@ -164,7 +164,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className="text-base-content/70 hover:text-primary transition-colors duration-200 text-sm"
+                                        className="text-base-content/80 link link-animated hover:text-primary transition-colors duration-200"
                                     >
                                         {link.name}
                                     </a>
