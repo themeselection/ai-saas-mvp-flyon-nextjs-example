@@ -4,10 +4,10 @@ export default function AccordionItem(props: any) {
   const { isActive, title, content } = props;
   return (
     <div className={classNames('accordion-item', isActive ? 'active' : '')}>
-      <button className="accordion-toggle inline-flex items-center gap-x-4 text-start">
+      <button className="accordion-toggle inline-flex justify-between items-center gap-x-4 text-start">
+        {title}
         <span className="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
         <span className="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
-        {title}
       </button>
       <div
         className={classNames(

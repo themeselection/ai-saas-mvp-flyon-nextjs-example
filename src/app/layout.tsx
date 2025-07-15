@@ -1,7 +1,6 @@
 import './globals.css';
 
 import FlyonuiScript from '../components/FlyonuiScript';
-import NavBar from '../components/NavBar';
 
 export default function RootLayout({
   children,
@@ -9,10 +8,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-base-200">
-        <NavBar />
-        <div className="p-6">{children}</div>
+    <html lang="en" data-theme="shadcn" className="scroll-smooth">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Video Generator - Create Stunning Videos with AI</title>
+      </head>
+      <body className="min-h-screen">
+        {children}
       </body>
       <FlyonuiScript />
     </html>
