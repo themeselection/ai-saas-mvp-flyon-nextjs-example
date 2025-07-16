@@ -34,12 +34,12 @@ export default function Features() {
             title: "One-Click Export",
             description: "Export your videos in any format or resolution with a single click. Optimized for every platform from Instagram to YouTube.",
             icon: "icon-[tabler--download]",
-            color: "accent"
+            color: "warning"
         }
     ];
 
     return (
-        <section className="bg-base-100 py-8 sm:py-16 lg:py-24">
+        <section id="features" className="bg-base-100 py-8 sm:py-16 lg:py-24">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="mb-12 space-y-4 text-center sm:mb-16 lg:mb-24">
@@ -73,7 +73,7 @@ export default function Features() {
                         >
                             <div className="card-body">
                                 <div className="avatar avatar-placeholder mb-4">
-                                    <div className={`text-success bg-${feature.color}/10 size-12 rounded-full`}>
+                                    <div className={`bg-${feature.color}/10 size-12 rounded-full`}>
                                         <span className={`${feature.icon} size-7 text-${feature.color}`}></span>
                                     </div>
                                 </div>

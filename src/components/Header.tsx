@@ -4,13 +4,34 @@ import { useEffect, useState } from 'react';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState<string>("");
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
+            // Section IDs in order of appearance
+            const sectionIds = [
+                'solution',
+                'features',
+                'how-it-works',
+                'pricing',
+                'faq',
+            ];
+            let current = '';
+            for (const id of sectionIds) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= 80 && rect.bottom > 80) {
+                        current = id;
+                        break;
+                    }
+                }
+            }
+            setActiveSection(current);
         };
-
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial check
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -46,10 +67,30 @@ export default function Header() {
                         className="lg:navbar-center transition-height collapse hidden grow overflow-hidden font-medium duration-300 lg:flex"
                     >
                         <div className="text-base-content flex gap-6 text-base max-lg:mt-4 max-lg:flex-col lg:items-center">
-                            <a href="#solution" className="hover:text-primary transition-colors duration-300">Features</a>
-                            <a href="#how-it-works" className="hover:text-primary transition-colors duration-300">How It Works</a>
-                            <a href="#pricing" className="hover:text-primary transition-colors duration-300">Pricing</a>
-                            <a href="#faq" className="hover:text-primary transition-colors duration-300">FAQ</a>
+                            <a
+                                href="#solution"
+                                className={`hover:text-primary transition-colors duration-300 ${activeSection === 'solution' ? 'text-error' : ''}`}
+                            >
+                                Features
+                            </a>
+                            <a
+                                href="#how-it-works"
+                                className={`hover:text-primary transition-colors duration-300 ${activeSection === 'how-it-works' ? 'text-error' : ''}`}
+                            >
+                                How It Works
+                            </a>
+                            <a
+                                href="#pricing"
+                                className={`hover:text-primary transition-colors duration-300 ${activeSection === 'pricing' ? 'text-error' : ''}`}
+                            >
+                                Pricing
+                            </a>
+                            <a
+                                href="#faq"
+                                className={`hover:text-primary transition-colors duration-300 ${activeSection === 'faq' ? 'text-error' : ''}`}
+                            >
+                                FAQ
+                            </a>
                         </div>
                     </div>
                     <div className="navbar-end max-lg:hidden">
