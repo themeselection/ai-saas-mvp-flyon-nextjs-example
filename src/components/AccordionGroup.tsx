@@ -4,7 +4,7 @@ export default function AccordionGroup() {
   return (
     <div className="accordion divide-neutral/20 max-w-lg divide-y">
       <AccordionItem
-        isActive="true"
+        isActive={true}
         title="When is payment taken for my order?"
         content="Payment is taken during the checkout process when you pay for your order. The order number that appears on the
   confirmation screen indicates payment has been successfully processed."

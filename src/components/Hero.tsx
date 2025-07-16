@@ -123,7 +123,9 @@ export default function Hero() {
                                 {/* Video Preview */}
                                 <div className="relative mb-4">
                                     <div className="bg-base-200 rounded-xl aspect-video overflow-hidden relative group cursor-pointer">
-                                        <img
+                                        <Image
+                                            width={800}
+                                            height={450}
                                             src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                             alt="AI Generated Video Preview"
                                             className="w-full h-full object-cover"

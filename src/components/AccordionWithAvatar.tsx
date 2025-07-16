@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 export default function AccordionWithAvatar() {
   return (
     <div>
-      
       <div className="accordion accordion-shadow max-w-lg">
         <div className="accordion-item active" id="payment-arrow-right">
           <button
@@ -12,9 +13,12 @@ export default function AccordionWithAvatar() {
             <div className="flex gap-4">
               <div className="avatar">
                 <div className="size-12 rounded-md">
-                  <img
+                  <Image
                     src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"
                     alt="avatar"
+                    width={48}
+                    height={48}
+                    className="rounded-md"
                   />
                 </div>
               </div>
@@ -53,9 +57,12 @@ export default function AccordionWithAvatar() {
             <div className="flex gap-4">
               <div className="avatar">
                 <div className="size-12 rounded-md">
-                  <img
+                  <Image
                     src="https://cdn.flyonui.com/fy-assets/avatar/avatar-7.png"
                     alt="avatar"
+                    width={48}
+                    height={48}
+                    className="rounded-md"
                   />
                 </div>
               </div>
@@ -94,9 +101,12 @@ export default function AccordionWithAvatar() {
             <div className="flex gap-4">
               <div className="avatar">
                 <div className="size-12 rounded-md">
-                  <img
+                  <Image
                     src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"
                     alt="avatar"
+                    width={48}
+                    height={48}
+                    className="rounded-md"
                   />
                 </div>
               </div>

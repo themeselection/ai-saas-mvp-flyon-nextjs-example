@@ -1,7 +1,12 @@
 import classNames from 'classnames';
 
-export default function AccordionItem(props: any) {
-  const { isActive, title, content } = props;
+interface AccordionItemProps {
+  isActive?: boolean;
+  title: string;
+  content: string;
+}
+
+export default function AccordionItem({ isActive = false, title, content }: AccordionItemProps) {
   return (
     <div className={classNames('accordion-item', isActive ? 'active' : '')}>
       <button className="accordion-toggle inline-flex justify-between items-center gap-x-4 text-start">

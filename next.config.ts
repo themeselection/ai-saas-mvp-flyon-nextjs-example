@@ -3,7 +3,16 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["cdn.flyonui.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.flyonui.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 };
 
